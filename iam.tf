@@ -15,9 +15,8 @@ module "role" {
 
   principals = var.principals
 
-  policy_documents = [
-    data.aws_iam_policy_document.log_agent.json,
-  ]
+  policy_documents = data.aws_iam_policy_document.log_agent.json
+
 }
 
 data "aws_iam_policy_document" "log_agent" {
